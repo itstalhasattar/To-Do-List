@@ -17,7 +17,8 @@ body {
   margin-top: 6rem;
 }
 .todolist {
-  width: 34%;
+  width: 35%;
+  min-width: 325px;
   background-color: #fff;
   padding: 1.5rem;
   border-radius: 1rem;
