@@ -8,6 +8,7 @@ form.addEventListener("submit", (event) => {
   const userInput = document.querySelector(".input-area").value;
 
   if (userInput == "") {
+    alert("Input Field cannot be Empty!")
   } else {
     // Create a new <li> element
     listItem = document.createElement("li");
@@ -18,5 +19,21 @@ form.addEventListener("submit", (event) => {
 
     // Clear the input field
     document.querySelector(".input-area").value = "";
+    
+    let span = document.createElement("span");
+    console.log(span)
+    span.innerHTML= "\u00d7";
+    listItem.appendChild(span);
+
+    listContainer.addEventListener("click",(e)=> {
+      if(e.target.tagName == 'LI'){
+        e.target.classList.toggle("checked")
+      }
+      else if (e.target.tagName == "SPAN"){
+        e.target.parentElement.remove();
+      }
+      
+
+    },false)
   }
 });

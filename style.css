@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  
 }
 
 body {
@@ -99,4 +100,26 @@ ul li.checked::before {
   background-image: url(images/checked.png);
   background-size: cover;
   left: 1px;
+}
+
+
+ul li span {
+  position :absolute;
+  top: -7px;
+  right: 5px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 22px;
+  text-align: center;
+  
+
+  
+  
+}
+
+ul li span:hover {
+  background: #e3e3e4;
+  border-radius: 2rem;
+
 }
