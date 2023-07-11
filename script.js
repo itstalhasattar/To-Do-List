@@ -28,17 +28,14 @@ form.addEventListener("submit", (event) => {
     span.innerHTML= "\u00d7";
     listItem.appendChild(span);
 
-    // before you had applied an event listener to the whole ul container that's why it was calling the event listener function more that once
-    // that was causing it to recall itself over and over again
-    // its better to apply it on the current li by getting it through the id you've set using the idCounter Var
+  
 
     const currentLi = document.getElementById(idCounter);
+  
 
     currentLi.addEventListener("click",(e)=> {
       if(e.target.tagName == 'LI'){
-        console.log(e.target.classList);
         e.target.classList.toggle("checked")
-        console.log(e.target.classList);
       }
       else if (e.target.tagName == "SPAN"){
         e.target.parentElement.remove();
