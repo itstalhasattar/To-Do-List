@@ -76,6 +76,7 @@ ul li {
   margin: 0.5rem;
   position: relative;
   padding-inline-start: 2.5rem;
+  transition: opacity 300ms ease-in-out;
 }
 ul li::after {
   content: "";
@@ -90,6 +91,7 @@ ul li::after {
 ul li.checked {
   color: #555;
   text-decoration: line-through;
+  opacity: 0.5;
 }
 
 ul li.checked::before {
